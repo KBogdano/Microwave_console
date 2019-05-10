@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1250</CODE-PAGE>
+	<version>100.831.0</version>
+	<lang>Java</lang>
+	<BuildNo>9835550</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<ISubsystem type="e">
+			<_id type="a">GUID 63c4db43-9ce3-40a1-a783-241baa9f45ee</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">com</_name>
+			<_modifiedTimeWeak type="a">5.10.2019::20:34:24</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.10.2019::20:43:17</_modifiedTime>
+			<_lastID type="a">1</_lastID>
+			<weakCGTime type="a">5.10.2019::20:34:24</weakCGTime>
+			<strongCGTime type="a">5.10.2019::20:34:6</strongCGTime>
+			<_defaultComposite type="s">GUID 4f1c847c-aad1-43cb-a038-2f9a18763202</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.1.1970::1:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID f6791537-fb28-46dd-844b-38be43235fa6</value>
+				<value>GUID 4f1c847c-aad1-43cb-a038-2f9a18763202</value>
+			</AggregatesList>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">telelogic</fileName>
+			<_id type="a">GUID f6791537-fb28-46dd-844b-38be43235fa6</_id>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID 4f1c847c-aad1-43cb-a038-2f9a18763202</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

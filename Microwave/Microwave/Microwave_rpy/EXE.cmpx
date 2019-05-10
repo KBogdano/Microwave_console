@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1250</CODE-PAGE>
+	<version>100.831.0</version>
+	<lang>Java</lang>
+	<BuildNo>9835550</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<IComponent type="e">
+			<_id type="a">GUID d814818c-53bb-444e-98b3-e52c11a358da</_id>
+			<_myState type="a">139264</_myState>
+			<_name type="a">EXE</_name>
+			<_modifiedTimeWeak type="a">5.10.2019::22:46:50</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.10.2019::22:46:50</_modifiedTime>
+			<m_buildType type="a">Executable</m_buildType>
+			<m_configActive type="r">
+				<ICodeGenConfigInfoHandle type="e">
+					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
+					<_hid type="a">GUID 07576960-244b-460d-8414-b0d3fb65f7b3</_hid>
+				</ICodeGenConfigInfoHandle>
+			</m_configActive>
+			<HandlesInMe type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">6</size>
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\Default.sbsx</_hfilename>
+							<_hname type="a">Default</_hname>
+							<_hid type="a">GUID 5c63c72f-5e32-487b-b57a-c678e5ef5c0a</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hfilename type="a">$OMROOT\Settings\UMLPerspectives\UMLPerspectives.sbs</_hfilename>
+							<_hname type="a">UMLPerspectives</_hname>
+							<_hid type="a">GUID d24d9192-bc4f-48a2-a4e1-fdaebbdfa6b6</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\JavaDoc\JavaDocProfile.sbs</_hfilename>
+							<_hname type="a">JavaDocProfile</_hname>
+							<_hid type="a">GUID 19700e28-456f-4c97-a19c-b95dcb3e9dff</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\com.sbsx</_hfilename>
+							<_hname type="a">com</_hname>
+							<_hid type="a">GUID 63c4db43-9ce3-40a1-a783-241baa9f45ee</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\telelogic.sbsx</_hfilename>
+							<_hsubsystem type="a">com</_hsubsystem>
+							<_hname type="a">telelogic</_hname>
+							<_hid type="a">GUID f6791537-fb28-46dd-844b-38be43235fa6</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\microwave.sbsx</_hfilename>
+							<_hsubsystem type="a">com::telelogic</_hsubsystem>
+							<_hname type="a">microwave</_hname>
+							<_hid type="a">GUID f59b9655-0c8a-4ca0-8081-3eee79e89272</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</HandlesInMe>
+			<VariationPoints type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</VariationPoints>
+			<SelectedVariants type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</SelectedVariants>
+			<weakCGTime type="a">5.10.2019::22:46:50</weakCGTime>
+			<strongCGTime type="a">5.10.2019::22:46:50</strongCGTime>
+			<AggregatesList type="e">
+				<value>GUID 458f5a92-5a99-4703-8f57-f32150ec890a</value>
+				<value>GUID 07576960-244b-460d-8414-b0d3fb65f7b3</value>
+			</AggregatesList>
+		</IComponent>
+		<IFolder type="e">
+			<_id type="a">GUID 458f5a92-5a99-4703-8f57-f32150ec890a</_id>
+			<_myState type="a">73728</_myState>
+			<_name type="a">Files</_name>
+			<_modifiedTimeWeak type="a">5.10.2019::20:33:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.10.2019::20:33:10</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Files>
+		</IFolder>
+		<ICodeGenConfigInfo type="e">
+			<_id type="a">GUID 07576960-244b-460d-8414-b0d3fb65f7b3</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Host</_name>
+			<_modifiedTimeWeak type="a">5.10.2019::22:48:6</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.10.2019::22:48:6</_modifiedTime>
+			<_scopeType type="a">Explicit</_scopeType>
+			<_instrumentation type="a">Animation</_instrumentation>
+			<_timeModel type="a">RealTime</_timeModel>
+			<m_generateActors type="a">1</m_generateActors>
+			<_statechartImplementation type="a">Flat</_statechartImplementation>
+			<_checksList type="a">0 ,</_checksList>
+			<ScopeElements type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</ScopeElements>
+			<InitialInstances type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">1</size>
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IClass</_hm2Class>
+							<_hfilename type="a">.\microwave.sbsx</_hfilename>
+							<_hsubsystem type="a">com::telelogic::microwave</_hsubsystem>
+							<_hname type="a">MicrowaveBuilder</_hname>
+							<_hid type="a">GUID 53ff6ba9-d461-4eba-8932-2a5fbc70a2ea</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</InitialInstances>
+			<weakCGTime type="a">5.10.2019::22:48:6</weakCGTime>
+			<strongCGTime type="a">5.10.2019::22:47:43</strongCGTime>
+			<AnimScopeElements type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</AnimScopeElements>
+			<m_allInAnimScope type="a">1</m_allInAnimScope>
+			<m_generateUsecases type="a">0</m_generateUsecases>
+			<AggregatesList type="e">
+				<value>GUID ac852e2d-5b4b-4ff5-9ae4-43dd37989232</value>
+				<value>GUID fd8a7bab-71e1-41a5-9d54-5500eb8c9a96</value>
+				<value>GUID b38dcf2d-de2c-4d5a-b1db-922ac4663256</value>
+			</AggregatesList>
+		</ICodeGenConfigInfo>
+		<IMHyperLink type="e">
+			<_id type="a">GUID ac852e2d-5b4b-4ff5-9ae4-43dd37989232</_id>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.10.2019::22:47:9</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</_dependsOn>
+			<_linkDispName type="a">Edit Makefile</_linkDispName>
+			<_linkType type="a">FREE</_linkType>
+			<_linkTarget type="a">C:/Users/student/Desktop/Microwave/Microwave/EXE/Host/EXE.bat</_linkTarget>
+			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
+		</IMHyperLink>
+		<IMHyperLink type="e">
+			<_id type="a">GUID fd8a7bab-71e1-41a5-9d54-5500eb8c9a96</_id>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.10.2019::22:47:9</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</_dependsOn>
+			<_linkDispName type="a">Edit Main File</_linkDispName>
+			<_linkType type="a">FREE</_linkType>
+			<_linkTarget type="a">C:/Users/student/Desktop/Microwave/Microwave/EXE/Host/MainEXE</_linkTarget>
+			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
+		</IMHyperLink>
+		<IFolder type="e">
+			<_id type="a">GUID b38dcf2d-de2c-4d5a-b1db-922ac4663256</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Host</_name>
+			<_modifiedTimeWeak type="a">5.10.2019::22:47:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.10.2019::22:47:20</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Files>
+		</IFolder>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+
