@@ -34,6 +34,7 @@ public class MainEXE {
         
             Class.forName("com.telelogic.microwave.evClose");
             Class.forName("com.telelogic.microwave.evElectricity");
+            Class.forName("com.telelogic.microwave.eventmessage_0");
             Class.forName("com.telelogic.microwave.evKeyPress");
             Class.forName("com.telelogic.microwave.evNoElectricity");
             Class.forName("com.telelogic.microwave.evOpen");

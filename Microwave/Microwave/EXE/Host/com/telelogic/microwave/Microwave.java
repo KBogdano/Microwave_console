@@ -1033,7 +1033,25 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void UpGrillEnter() {
             //#[ state Grilling.UpGrill.(Entry) 
-                              System.out.println("Up Grill in use");
+            char[] anim = new char[]{'|', '/', '-', '\\'};    
+                           try{
+            	Thread.sleep(2000);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            
+            for (int i = 0; i <= 100; i++) 
+            {
+            	System.out.print("Up grill process "+i+" %" + anim[i%4] + "\r");
+            	
+            	try{
+            	Thread.sleep(50);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            }       
+            
+            System.out.println("Cooling the heat.....");
             //#]
             itsRiJThread.schedTimeout(UpGrillTime, Microwave_Timeout_UpGrill_id, this, "ROOT.Grilling.UpGrill");
         }
@@ -1148,7 +1166,23 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void RinsingEnter() {
             //#[ state Washing.Rinsing.(Entry) 
-                                        System.out.println("Rinsing");
+            char[] anim = new char[]{'|', '/', '-', '\\'};    
+                           try{
+            	Thread.sleep(500);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            
+            for (int i = 0; i <= 100; i++) 
+            {
+            	System.out.print("Rinsing: "+i+" %" + anim[i%4] + "\r");
+            	
+            	try{
+            	Thread.sleep(50);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            }   
             //#]
             itsRiJThread.schedTimeout(RinsingTime, Microwave_Timeout_Rinsing_id, this, "ROOT.Washing.Rinsing");
         }
@@ -1230,7 +1264,26 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void Microwaving_MicrowavingEnter() {
             //#[ state Microwaving.Microwaving.(Entry) 
-                               System.out.println("Microwaving...");
+                                        
+                           char[] anim = new char[]{'|', '/', '-', '\\'};    
+                           try{
+            	Thread.sleep(2000);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            
+            for (int i = 0; i <= 100; i++) 
+            {
+            	System.out.print("Microwaving: "+i+" %" + anim[i%4] + "\r");
+            	
+            	try{
+            	Thread.sleep(200);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            }       
+            
+            System.out.println("Cooling the heat.....");
             //#]
             itsRiJThread.schedTimeout(MicrowaveTime, Microwave_Timeout_Microwaving_Microwaving_id, this, "ROOT.Microwaving.Microwaving");
         }
@@ -1591,6 +1644,9 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void RinsingExit() {
             itsRiJThread.unschedTimeout(Microwave_Timeout_Rinsing_id, this);
+            //#[ state Washing.Rinsing.(Exit) 
+                                         System.out.println("");
+            //#]
         }
         
         //## statechart_method 
@@ -1618,6 +1674,29 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void UpGrillExit() {
             itsRiJThread.unschedTimeout(Microwave_Timeout_UpGrill_id, this);
+            //#[ state Grilling.UpGrill.(Exit) 
+            System.out.println("Grilling process is finished");   
+            for (int i = 0;i<3;i++){
+            System.out.println("\007");
+            try{
+            Thread.sleep(800);
+            } catch (InterruptedException e){
+            e.printStackTrace();
+            }
+             
+            }     
+            System.out.println("Cleaning the screen in a few seconds"); 
+            try{
+            Thread.sleep(3000);
+            } catch (InterruptedException e){
+            e.printStackTrace();
+            }
+            
+            for(int f=0;f<20;f++){
+            System.out.println("\n");
+            }
+            System.out.println("Enter your command below: ");
+            //#]
         }
         
         //## statechart_method 
@@ -1711,20 +1790,6 @@ public class Microwave implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int WashingTakeevStartWashing() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("8");
-            Washing_exit();
-            //#[ transition 8 
-            SetupWashing();
-            //#]
-            Off_entDef();
-            animInstance().notifyTransitionEnded("8");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
         public void rootState_enter() {
             animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
@@ -1783,6 +1848,29 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void TurnAroundFinish1Exit() {
             itsRiJThread.unschedTimeout(Microwave_Timeout_TurnAroundFinish1_id, this);
+            //#[ state Unfrozing.TurnAroundFinish1.(Exit) 
+                                       System.out.println("Unfrozing process is finished");   
+            for (int i = 0;i<3;i++){
+            System.out.println("\007");
+            try{
+            Thread.sleep(800);
+            } catch (InterruptedException e){
+            e.printStackTrace();
+            }
+             
+            }     
+            System.out.println("Cleaning the screen in a few seconds"); 
+            try{
+            Thread.sleep(3000);
+            } catch (InterruptedException e){
+            e.printStackTrace();
+            }
+            
+            for(int f=0;f<20;f++){
+            System.out.println("\n");
+            }
+            System.out.println("Enter your command below: ");
+            //#]
         }
         
         //## statechart_method 
@@ -1824,6 +1912,29 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void DryingExit() {
             itsRiJThread.unschedTimeout(Microwave_Timeout_Drying_id, this);
+            //#[ state Washing.Drying.(Exit) 
+                                   System.out.println("Washing process is finished");   
+            for (int i = 0;i<3;i++){
+            System.out.println("\007");
+            try{
+            Thread.sleep(800);
+            } catch (InterruptedException e){
+            e.printStackTrace();
+            }
+             
+            }     
+            System.out.println("Cleaning the screen in a few seconds"); 
+            try{
+            Thread.sleep(3000);
+            } catch (InterruptedException e){
+            e.printStackTrace();
+            }
+            
+            for(int f=0;f<20;f++){
+            System.out.println("\n");
+            }
+             System.out.println("Enter your command below: ");
+            //#]
         }
         
         //## statechart_method 
@@ -1857,7 +1968,25 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void DownGrillEnter() {
             //#[ state Grilling.DownGrill.(Entry) 
-                      System.out.println("Down Grill in use");
+            char[] anim = new char[]{'|', '/', '-', '\\'};    
+                           try{
+            	Thread.sleep(2000);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            
+            for (int i = 0; i <= 100; i++) 
+            {
+            	System.out.print("Down grill process: "+i+" %" + anim[i%4] + "\r");
+            	
+            	try{
+            	Thread.sleep(50);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            }       
+            
+            System.out.println("Cooling the heat..... \n");
             //#]
             itsRiJThread.schedTimeout(DownGrillTime, Microwave_Timeout_DownGrill_id, this, "ROOT.Grilling.DownGrill");
         }
@@ -1879,7 +2008,8 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void TurnAroundStartEnter() {
             //#[ state Microwaving.TurnAroundStart.(Entry) 
-            System.out.println("Starting to turn around");
+            System.out.println("Starting to turn around");     
+            
             //#]
             itsRiJThread.schedTimeout(RoundTimeStart, Microwave_Timeout_TurnAroundStart_id, this, "ROOT.Microwaving.TurnAroundStart");
         }
@@ -2016,7 +2146,25 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void Unfrozing_UnfrozingEnter() {
             //#[ state Unfrozing.Unfrozing.(Entry) 
-                           System.out.println("Unfrozing....");
+            char[] anim = new char[]{'|', '/', '-', '\\'};    
+                           try{
+            	Thread.sleep(2000);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            
+            for (int i = 0; i <= 100; i++) 
+            {
+            	System.out.print("Unfrozing: "+i+" %" + anim[i%4] + "\r");
+            	
+            	try{
+            	Thread.sleep(200);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            }       
+            
+            
             //#]
             itsRiJThread.schedTimeout(UnfrozingTime, Microwave_Timeout_Unfrozing_Unfrozing_id, this, "ROOT.Unfrozing.Unfrozing");
         }
@@ -2283,6 +2431,20 @@ public class Microwave implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int OffTakeevStartWashing() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("8");
+            Off_exit();
+            //#[ transition 8 
+            SetupWashing();
+            //#]
+            Washing_entDef();
+            animInstance().notifyTransitionEnded("8");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public int OffTakeevStartGrill() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("6");
@@ -2362,7 +2524,7 @@ public class Microwave implements RiJStateConcept, Animated {
             animInstance().notifyTransitionStarted("5");
             Off_exit();
             //#[ transition 5 
-            SetupNormal() ;
+            SetupNormal();
             //#]
             Microwaving_entDef();
             animInstance().notifyTransitionEnded("5");
@@ -2377,7 +2539,23 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void DryingEnter() {
             //#[ state Washing.Drying.(Entry) 
-                            System.out.println("Drying");
+            char[] anim = new char[]{'|', '/', '-', '\\'};    
+                           try{
+            	Thread.sleep(500);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            
+            for (int i = 0; i <= 100; i++) 
+            {
+            	System.out.print("Drying: "+i+" %" + anim[i%4] + "\r");
+            	
+            	try{
+            	Thread.sleep(50);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            }   
             //#]
             itsRiJThread.schedTimeout(DryingTime, Microwave_Timeout_Drying_id, this, "ROOT.Washing.Drying");
         }
@@ -2385,7 +2563,25 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void Washing_WashingEnter() {
             //#[ state Washing.Washing.(Entry) 
-                                     System.out.println("Washing");
+            char[] anim = new char[]{'|', '/', '-', '\\'};    
+                           try{
+            	Thread.sleep(2000);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            
+            for (int i = 0; i <= 100; i++) 
+            {
+            	System.out.print("Washing: "+i+" %" + anim[i%4] + "\r");
+            	
+            	try{
+            	Thread.sleep(50);
+            	} catch (InterruptedException e){
+            	e.printStackTrace();
+            	}
+            }       
+            
+            
             //#]
             itsRiJThread.schedTimeout(WashingTime, Microwave_Timeout_Washing_Washing_id, this, "ROOT.Washing.Washing");
         }
@@ -2400,10 +2596,6 @@ public class Microwave implements RiJStateConcept, Animated {
             else if(event.isTypeOf(evOpen.evOpen_microwave_telelogic_com_id))
                 {
                     res = WashingTakeevOpen();
-                }
-            else if(event.isTypeOf(evStartWashing.evStartWashing_microwave_telelogic_com_id))
-                {
-                    res = WashingTakeevStartWashing();
                 }
             
             return res;
@@ -2466,6 +2658,29 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void TurnAroundFinishExit() {
             itsRiJThread.unschedTimeout(Microwave_Timeout_TurnAroundFinish_id, this);
+            //#[ state Microwaving.TurnAroundFinish.(Exit) 
+            System.out.println("Microwaving process is finished");   
+            for (int i = 0;i<3;i++){
+            System.out.println("\007");
+            try{
+            Thread.sleep(800);
+            } catch (InterruptedException e){
+            e.printStackTrace();
+            }
+             
+            }     
+            System.out.println("Cleaning the screen in a few seconds"); 
+            try{
+            Thread.sleep(3000);
+            } catch (InterruptedException e){
+            e.printStackTrace();
+            }
+            
+            for(int f=0;f<20;f++){
+            System.out.println("\n");
+            }
+            System.out.println("Enter your command below: ");
+            //#]
         }
         
         //## statechart_method 
@@ -2519,6 +2734,10 @@ public class Microwave implements RiJStateConcept, Animated {
                 {
                     res = OffTakeevStartNormal();
                 }
+            else if(event.isTypeOf(evStartWashing.evStartWashing_microwave_telelogic_com_id))
+                {
+                    res = OffTakeevStartWashing();
+                }
             
             return res;
         }
@@ -2560,6 +2779,9 @@ public class Microwave implements RiJStateConcept, Animated {
         //## statechart_method 
         public void Washing_WashingExit() {
             itsRiJThread.unschedTimeout(Microwave_Timeout_Washing_Washing_id, this);
+            //#[ state Washing.Washing.(Exit) 
+             System.out.println("");
+            //#]
         }
         
         /**  methods added just for design level debugging instrumentation */

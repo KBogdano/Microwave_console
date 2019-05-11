@@ -44,7 +44,8 @@ public class KeyReader implements RiJActive, RiJStateConcept, Animated {
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int action_1=1;
+    public static final int action_2=1;
+    public static final int action_1=2;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -215,10 +216,20 @@ public class KeyReader implements RiJActive, RiJStateConcept, Animated {
         //## statechart_method 
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
-            if(rootState_subState == action_1)
+            switch (rootState_subState) {
+                case action_2:
+                {
+                    action_2_add(animStates);
+                }
+                break;
+                case action_1:
                 {
                     action_1_add(animStates);
                 }
+                break;
+                default:
+                    break;
+            }
         }
         
         //## statechart_method 
@@ -232,11 +243,26 @@ public class KeyReader implements RiJActive, RiJStateConcept, Animated {
         //## statechart_method 
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(rootState_active == action_1)
+            switch (rootState_active) {
+                case action_2:
+                {
+                    res = action_2_takeEvent(id);
+                }
+                break;
+                case action_1:
                 {
                     res = action_1_takeEvent(id);
                 }
+                break;
+                default:
+                    break;
+            }
             return res;
+        }
+        
+        //## statechart_method 
+        public void action_2_add(AnimStates animStates) {
+            animStates.add("ROOT.action_2");
         }
         
         //## statechart_method 
@@ -257,12 +283,21 @@ public class KeyReader implements RiJActive, RiJStateConcept, Animated {
         //## statechart_method 
         public int action_1TakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("1");
+            animInstance().notifyTransitionStarted("2");
             action_1_exit();
             action_1_entDef();
-            animInstance().notifyTransitionEnded("1");
+            animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
+        }
+        
+        //## statechart_method 
+        public void action_2Exit() {
+        }
+        
+        //## statechart_method 
+        public void action_2_entDef() {
+            action_2_enter();
         }
         
         //## statechart_method 
@@ -283,6 +318,32 @@ public class KeyReader implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void action_2Enter() {
+            //#[ state action_2.(Entry) 
+            System.out.println("_______________________________________________________________________________");
+            System.out.println("|   Microwave Project - author: Kamil Bogdanowski                              |"); 
+            System.out.println("|   Index Number: 292481                                                       |");
+            System.out.println("|   Profile: Mechatronics 3rd year        Subject: Software Engingeering       |");
+            System.out.println("|   Here you have a device that allows you to microwave, grill, unfroze        |");
+            System.out.println("|   your meal and then to wash a device in a proper way                        |");
+            System.out.println("|                                                                              |");
+            System.out.println("|   There is an instruction for you how to use it underneath                   |"); 
+            System.out.println("|   To turn on the normal mode press n                                         |");
+            System.out.println("|   To turn on the grill mode press g                                          |"); 
+            System.out.println("|   To turn on the unfrozing mode press u                                      |");
+            System.out.println("|   To turn on the washing mode press w                                        |"); 
+            System.out.println("|   To open the door press o                                                   |"); 
+            System.out.println("|   To close the door press c                                                  |"); 
+            System.out.println("|   To press the safety button which stops the electricity flow press s        |"); 
+            System.out.println("|   To unpress the safety button what lets the electricity flow again press p  |");  
+            System.out.println("|______________________________________________________________________________|");     
+            System.out.println(" ");
+            System.out.println("Enter your command below: ");
+            
+            //#]
+        }
+        
+        //## statechart_method 
         public void rootState_enter() {
             animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
@@ -295,13 +356,17 @@ public class KeyReader implements RiJActive, RiJStateConcept, Animated {
         //## statechart_method 
         public void action_1Enter() {
             //#[ state action_1.(Entry) 
-            System.out.println("Enter command: ");
+            
             char cmd = 0;
             
             try
             {
             while (Character.isLetterOrDigit(cmd) == false)
             cmd = (char)System.in.read();
+            if((cmd != 's' &&  cmd != 'o') &&  (cmd != 'c' &&  cmd != 'x') &&  (cmd != 'n' &&  cmd != 'g')&&  (cmd != 'u' &&  cmd != 'w')){
+            System.out.println("\007");
+            System.out.println("Enter a correct value");   
+            }
             }
             
             catch(java.io.IOException e)
@@ -316,9 +381,16 @@ public class KeyReader implements RiJActive, RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void action_2_exit() {
+            popNullConfig();
+            action_2Exit();
+            animInstance().notifyStateExited("ROOT.action_2");
+        }
+        
+        //## statechart_method 
         public void rootStateEntDef() {
             animInstance().notifyTransitionStarted("0");
-            action_1_entDef();
+            action_2_entDef();
             animInstance().notifyTransitionEnded("0");
         }
         
@@ -345,6 +417,37 @@ public class KeyReader implements RiJActive, RiJStateConcept, Animated {
         
         //## statechart_method 
         public void rootStateExit() {
+        }
+        
+        //## statechart_method 
+        public void action_2_enter() {
+            animInstance().notifyStateEntered("ROOT.action_2");
+            pushNullConfig();
+            rootState_subState = action_2;
+            rootState_active = action_2;
+            action_2Enter();
+        }
+        
+        //## statechart_method 
+        public int action_2_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = action_2TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int action_2TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
+            action_2_exit();
+            action_1_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         /**  methods added just for design level debugging instrumentation */
